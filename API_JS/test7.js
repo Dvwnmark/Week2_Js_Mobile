@@ -1,6 +1,6 @@
 var url = "https://650423e0c8869921ae248ff5.mockapi.io/api/users"        
 var xhr = new XMLHttpRequest();    
-xhr.open("DELETE", url + '/4', true);    
+xhr.open("DELETE", url + '/9', true);    
 xhr.onload = function() {      
     var users = JSON.parse(xhr.responseText);      
     if (xhr.readyState == 4 && xhr.status == "200") {        
