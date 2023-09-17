@@ -43,5 +43,5 @@ The second week for js
 
 
 ![image](https://github.com/Dvwnmark/Week2_Js_Mobile/assets/127032108/54468865-2d8d-4fb5-bc59-eb142d439809)
-
+8.
 
