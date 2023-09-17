@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>const game = {
+        team1: 'Bayern Munich',
+        team2: 'Borrussia Dortmund',
+        players: [
+          [
+            'Neuer',
+            'Pavard',
+            'Martinez',
+            'Alaba',
+            'Davies',
+            'Kimmich',
+            'Goretzka',
+            'Coman',
+            'Muller',
+            'Gnarby',
+            'Lewandowski',
+          ],
+          [
+            'Hitz',
+            'Meunier',
+            'Humels',
+            'Akanji',
+            'Schulz',
+            'Witsel',
+            'Delaney',
+            'Reyna',
+            'Brandt',
+            'Haaland',
+            'Bellingham',
+          ],
+        ],
+        score: '4:0',
+        scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+        date: 'Nov 9th, 2037',
+        odds: {
+          team1: 1.33,
+          x: 3.25,
+          team2: 6.5,
+        },
+      };
+      
+      // Task 1: Create player arrays for each team
+      const [players1, players2] = game.players;
+      
+      // Task 2: Extract goalkeeper and field players for Bayern Munich
+      const [gk, ...fieldPlayers] = players1;
+      
+      // Task 3: Create an array containing all players of both teams
+      const allPlayers = [...players1, ...players2];
+      
+      // Task 4: Create an array for team1 players with substitutions
+      const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+      
+      // Task 5: Create variables for odds
+      const { team1, x: draw, team2: team2Odds } = game.odds;
+      
+      // Task 6: Write a function to print goals
+      function printGoals(...playerNames) {
+        const totalGoals = playerNames.length;
+        console.log(`Goals scored by ${playerNames.join(', ')}: ${totalGoals}`);
+      }
+      
+      // Test data for Task 6
+      printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+      printGoals(...game.scored);
+      
+      // Task 7: Determine the more likely winning team without if/else or ternary
+      console.log(
+        `The team more likely to win is ${
+          team1 < team2Odds ? game.team1 : game.team2
+        }`
+      );</script>
+</body>
+</html>
